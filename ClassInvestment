@@ -1,0 +1,58 @@
+
+class Employee {
+	
+	String Employee;
+	String SunyEmail;
+	int Balance;
+	
+	Employee(String Emp, int Bal){
+		
+		 Employee = Emp; 
+		 Balance = Bal; 
+		 SunyEmail = "unknown";
+	}
+	
+	Employee(String Emp, int Bal, String Sun) {
+		
+		Employee = Emp;
+		Balance = Bal;
+		SunyEmail = Sun;
+	}
+	
+public String getInitials() {
+	String initials = "";
+	for (int i = 0;i < Employee.length(); i++) {
+		char currentChar = Employee.charAt(i);
+		if (currentChar >= 'A' && currentChar <= 'Z')
+						initials = initials + currentChar + '.';
+	}
+	return initials;
+	}
+
+}
+public class ClassInvestment {
+
+	public static void main(String[] args) {
+		Employee[] a = new Employee[16];
+		a[0] = new Employee("Sean Kirchner", 388,"sean.kirchner@sunydutchess.edu");
+		a[1] = new Employee("Eric Luna", 243,"eric.luna@sunydutchess.edu");
+		a[2] = new Employee("Jackson Nogles", 299,"Jackson.Nogles@sunydutchess.edu");
+		a[3] = new Employee("Janelly Antonio", 278,"Janelly.Antonio@sunydutchess.edu");
+		a[4] = new Employee("Daniel Conroy", 329,"Daniel.Conroy@sunydutchess.edu");
+		a[5] = new Employee("Wenhao Jin", 445,"Wenhao.Jin@sunydutchess.edu");
+		a[6] = new Employee("Nathaniel Jones", 402,"nathaniel.jones1@sunydutchess.edu");
+		a[7] = new Employee("Sabrina Lin", 275,"sabrina.lin@sunydutchess.edu");
+		a[8] = new Employee("Kevin Luna", 334,"kevin.luna@sunydutchess.edu");
+		a[9] = new Employee("Zayad Maanane", 412,"zayad.maanane@sunydutchess.edu");
+		a[10] = new Employee("Hanne Nicolaisen", 393,"Hanne.Nicolaisen@sunydutchess.edu ");
+		a[11] = new Employee("Emily Parvar", 343,"emily.parvar@sunydutchess.edu");
+		a[12] = new Employee("Jaspreet Singh", 317,"Jaspreet.Singh@sunydutchess.edu");
+		a[13] = new Employee("Athena Glorius Stebe", 265,"Athena.Stebe@sunydutchess.edu");
+		a[14] = new Employee("Melanie Taylor", 354,"Melanie.Taylor@sunydutchess.edu");	
+		a[15] = new Employee("Tankeh Appolo", 234,"appolo.tankeh@sunydutchess.edu");
+				
+		for(int i = 0; i < a.length;i++)
+			System.out.println("Initials: " + a[i].getInitials() + " " + "Balance: " + a[i].Balance + " " + "SunyEmail: " + a[i].SunyEmail);
+	 }
+
+}
