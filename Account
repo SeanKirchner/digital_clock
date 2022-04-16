@@ -1,0 +1,26 @@
+import javax.swing.JOptionPane;
+
+public class Account {
+
+	public static void main(String[] args) {
+		String input;
+		input = JOptionPane.showInputDialog("What is your account's starting balance?");
+		double in = Double.parseDouble(input);
+		BankAccount account = new BankAccount(in);
+		input = JOptionPane.showInputDialog("How much were you paid this month?");
+		double deposit = Double.parseDouble(input);
+		account.deposit(deposit);
+		JOptionPane.showMessageDialog(null,  String.format("Your pay has been deposited.\n" + "Your current balance is $%,.2f", account.getBalance()));
+		input = JOptionPane.showInputDialog("How much would you like to withdraw?");
+		double withdraw = Double.parseDouble(input);
+		account.withdraw(withdraw);
+		JOptionPane.showMessageDialog(null, String.format("Now your balance is $%,.2f", account.getBalance()));
+		getBalance();
+		System.exit(0);
+		
+	}
+
+	private static void getBalance() {
+		
+	}
+}
