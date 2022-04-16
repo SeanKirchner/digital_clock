@@ -1,0 +1,36 @@
+
+public class BankAccount {
+
+	private double balance;
+		
+	public BankAccount() {
+		balance = 0.00;
+	}
+	
+	public BankAccount(double initialAmount) {
+		balance = initialAmount;
+	}
+	
+	public void deposit(double amount) {
+		balance += amount;
+	}
+	
+	public void withdraw(double amount) {
+		balance -= amount;
+	}
+	
+	public double getBalance() {
+		return balance;
+	}
+
+	public void transfer(BankAccount other, double amount) {
+		withdraw(amount);
+		other.deposit(amount);
+	}
+	
+	public String toString() {
+		return "Account balance: " + balance;
+	}
+	
+}
+
